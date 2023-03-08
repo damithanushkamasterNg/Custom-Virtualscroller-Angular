@@ -1,0 +1,32 @@
+<h4>Create a component that uses virtual scroll:</h4>
+
+<ul>
+  <li> The AppComponent is a component that uses virtual scroll to render a list of items.</li>
+
+  <li>The interface Item defines the shape of an item in the list.</li>
+
+  <li> The @Component decorator defines the metadata for the component. It specifies the selector, the template, and the
+    styles.
+  </li>
+
+  <li> The template uses cdk-virtual-scroll-viewport directive to wrap the list of items. The itemSize attribute sets
+    the height of each item in pixels, and the class attribute sets the CSS class for the viewport element.
+  </li>
+
+  <li> The *cdkVirtualFor directive is used to iterate over the items array and render each item in the list.</li>
+
+  <li> The styles array defines the styles for the component. It sets the height of the viewport and the height of each
+    item.
+  </li>
+
+  <li> The items array is initialized in the constructor with 10,000 items. This is an example of a large list that
+    would benefit from virtual scroll.
+  </li>
+</ul>
+
+
+<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+  <div *cdkVirtualFor="let item of items" class="item">
+    {{item.id}} - {{item.name}}
+  </div>
+</cdk-virtual-scroll-viewport>
