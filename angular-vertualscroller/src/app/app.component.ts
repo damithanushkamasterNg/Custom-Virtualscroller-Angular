@@ -12,7 +12,7 @@ interface Item {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-vertualscroller';
+  title = 'angular-virtualScroller';
 
   items: Item[] = [];
 
